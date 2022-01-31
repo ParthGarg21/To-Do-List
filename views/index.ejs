@@ -1,0 +1,38 @@
+<%- include("header") -%>
+
+    <div class="par-con">
+
+
+        <div class="list-con">
+            <h1>
+                <%= title%>
+            </h1>
+
+            <div class="items-con">
+                <%for (let item of items) {%>
+                    <%if (item.length !==0) {%>
+
+                        <div class="item">
+                            <input class="chk-box" type="checkbox">
+                            <p class="content">
+                                <%= item %>
+                            </p>
+                        </div>
+                        <%}%>
+                            <%}%>
+                                <div class="form-con">
+
+                                    <form action=<%=path %> method="post">
+                                        <input class="item-text" type="text" name="newItem" id=""
+                                            placeholder="New Item">
+                                        <input class="btn" type="submit" value="+">
+                                    </form>
+                                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <%- include("footer") -%>
